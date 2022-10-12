@@ -1,21 +1,15 @@
-
 from flask import Flask
-
 from wsgiref import simple_server
-
 from flask import Flask, session, request, Response, jsonify
-
-
 
 import atexit
 import uuid
 import os
 app = Flask(__name__)
 
-
 @app.route('/', methods=['GET', 'POST'])
 def index():
-    return "Flask app is running and I am changing something and it will deploy on heroku."
+    return "Flask app is running and I am changing something."
 
 port = int(os.getenv("PORT", 5001))
 
